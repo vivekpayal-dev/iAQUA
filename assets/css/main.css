@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap");
+
 :root {
   --font-body: 'Outfit', sans-serif;
   --font-heading: 'Outfit', serif;
-  --color-primary: #C4EF17;
+  --color-primary: #0077B6;
   --color-heading: #131217;
   --xb-track-color: #16171B;
   --color-dark: #0F172A;
@@ -13,6 +14,7 @@
   --color-border: #EFF5F8;
   --easing: cubic-bezier(0.67, 0.04, 0.3, 0.91);
 }
+
 /* reset css start */
 :root {
   scroll-behavior: auto;
@@ -7142,7 +7144,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::after {
 
 .marquee-two .db-marquee .marquee-item {
   font-size: 24px;
-  color: #000;
+  color: white;
   font-weight: 400;
   line-height: 40.5px;
   letter-spacing: -0.48px;
@@ -7157,7 +7159,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::after {
   content: '';
   height: 6px;
   width: 6px;
-  background: #000;
+  background: #ffffff;
   left: -16px;
   top: 17px;
   border-radius: 50px;
@@ -13900,7 +13902,7 @@ abbr[title] {
 }
 
 .dm-btn .button__bg {
-  background: var(--color-white);
+  background: #0d6efd;
 }
 
 .services-bg::before {
@@ -13959,7 +13961,7 @@ abbr[title] {
   right: 0;
   width: 100%;
   height: 56.5%;
-  background: linear-gradient(359deg, #C4EF17 6.31%, rgba(111, 136, 9, 0) 62%);
+  background: linear-gradient(359deg, #0077B6 6.31%, rgba(111, 136, 9, 0) 62%);
   opacity: 0;
   visibility: hidden;
   -webkit-transition: 0.3s;
