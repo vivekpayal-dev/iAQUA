@@ -12684,7 +12684,7 @@ abbr[title] {
 .circle-btn .button__bg::after {
   content: '';
   position: absolute;
-  background: #CEFF0A;
+  background: var(--color-primary);
 }
 
 .circle-btn .button__bg::before {
@@ -13977,7 +13977,13 @@ abbr[title] {
 .dm-service:hover .xb-item--srv_link a span {
   border: 1px solid var(--color-white);
 }
-
+.xb-item--image{
+  height: 262px;
+}
+.xb-item--image img{
+  height: 100%;
+  object-fit: cover;
+}
 .dm-service:hover .xb-item--image img {
   transform: scale(1.1);
 }
