@@ -236,8 +236,8 @@
                 </div>
                 <div class="container">
                     <div class="dm-hero-content pos-rel">
-                        <div class="xb-item--dm-image wow skewIn" data-wow-duration=".7s">
-                            <img src="assets/img/digital-marketing/hero/hero-04.jpg" alt="">
+                        <div class="xb-item--dm-image">
+                            <img src="assets/img/digital-marketing/hero/hero-04.png" alt="" class="hero-img">
                         </div>
                         <h1 class="xb-item--title wow fadeInUp">The all new iAQUA <br> <span class="sp-two">X-Jet™
                                 Xtreme</span> <span class="sp-one">Journey</span></h1>
@@ -853,6 +853,24 @@
     <script src="assets/js/matter.js"></script>
     <script src="assets/js/throwable.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        const heroImg = document.querySelector('.hero-img');
+
+        function animateImage() {
+            gsap.to(heroImg, {
+                opacity: 1,
+                scale: 1.2,
+                duration: 1.2,
+                ease: 'power2.out',
+            });
+        }
+
+        if (heroImg.complete) {
+            animateImage(); // Already cached
+        } else {
+            heroImg.addEventListener('load', animateImage);
+        }
+    </script>
 
 </body>
 
