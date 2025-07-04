@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/css/imageRevealHover.css">
     <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Ripple.js/1.0.0/ripple.min.css" />
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
         .header-area {
@@ -32,12 +33,18 @@
         .xb-header.xb-header-area-sticky.xb-sticky-stt.xb-header-fixed {
             display: none;
         }
-    </style>
 
+        body {
+            background-color: #090909;
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%), linear-gradient(-45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.05) 75%), linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.05) 75%);
+            background-size: 6px 6px;
+            background-position: 0 0, 0 6px, 6px -6px, -6px 0px;
+            color: #ffffff;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- backtotop - start -->
     <div class="xb-backtotop">
         <a href="#" class="scroll">
             <i class="far fa-arrow-up"></i>
@@ -174,7 +181,6 @@
             </div>
         </header>
         <!-- header end -->
-
         <!-- overlay menu start -->
         <div class="overlay-menu">
             <div class="close">
@@ -226,44 +232,277 @@
             </div>
         </div>
         <!-- overlay menu end -->
-
         <!-- main area start  -->
         <main>
-            <!-- hero section start  -->
-            <section class="hero-digital-marketing pos-rel">
-                <div class="dm-hero-img wow skewIn" data-wow-delay="250ms">
-                    <img src="assets/img/digital-marketing/hero/hero-05.jpg" alt="">
+            <style>
+                .parallax {
+                    /* overflow: hidden; */
+                    position: relative;
+                    z-index: 0;
+                    min-height: 75vh;
+                    display: grid;
+                    grid-template-areas: "stack";
+                }
+
+                .parallax>* {
+                    grid-area: stack;
+                    animation: parallax linear;
+                    animation-timeline: scroll();
+                }
+
+                .parallax>img {
+                    width: 100%;
+                }
+
+                .primary-header,
+                .hero {
+                    --parallax-speed: 10;
+                    z-index: 10;
+                }
+
+                .parallax__bg {
+                    --parallax-speed: -10;
+
+                    z-index: 1;
+                    min-height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                .parallax__dust {
+                    --parallax-speed: -20;
+                    z-index: 2;
+                }
+
+                .parallax__luna {
+                    --parallax-speed: 50;
+                    z-index: 3;
+                }
+
+                .parallax__manny {
+                    --parallax-speed: 30;
+                    z-index: 4;
+                }
+
+                .parallax__jax {
+                    --parallax-speed: 10;
+                    z-index: 5;
+                }
+
+                .parallax__rays {
+                    --parallax-speed: 50;
+                    z-index: 3;
+                }
+
+                .parallax__foreground-front,
+                .parallax__foreground-back {
+                    z-index: 999;
+                    align-self: end;
+                }
+
+                .parallax__foreground-back {
+                    transform: scaleY(1.2);
+                    transform-origin: bottom;
+                    mix-blend-mode: hard-light;
+                }
+
+                .main-content {
+                    position: relative;
+                    /* z-index: 1; */
+                    background: hsl(238, 100%, 6%);
+                    padding-block: 6rem;
+                }
+
+                @keyframes parallax {
+                    to {
+                        transform:
+                            translateY(calc(var(--parallax-speed) * 200px));
+                    }
+                }
+
+                /* general styling */
+
+                html {
+                    color-scheme: dark;
+                }
+
+                body {
+                    margin: 0;
+                    font-family: "Rubik", sans-serif;
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                    /* for demo only */
+                    text-transform: uppercase;
+                    /* for demo only */
+                }
+
+                img {
+                    display: block;
+                    max-width: 100%;
+                }
+
+                .wrapper {
+                    width: min(65rem, 100% - 4rem);
+                    margin-inline: auto;
+                }
+
+                .flex-group {
+                    display: flex;
+                    gap: 1rem;
+                }
+
+                .button {
+                    font: inherit;
+                    font-style: italic;
+                    text-transform: uppercase;
+                    background: hsl(279, 75%, 59%);
+                    padding: 1em 2em;
+                    border: 0;
+                    border-radius: 0.125em;
+                }
+
+                .primary-header {
+                    padding-block: 2rem;
+                }
+
+                .primary-header__inner {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .primary-nav ul {
+                    flex: 1;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    gap: 1rem;
+                    justify-content: space-between;
+                }
+
+                .primary-nav a {
+                    color: white;
+                    font-weight: 700;
+                    text-decoration: none;
+                }
+
+                .logo {
+                    max-width: 100px;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        inset: -3rem;
+                        z-index: -1;
+                        background: radial-gradient(hsl(0 0% 100% / 0.5), transparent 70%);
+                    }
+                }
+
+                .hero {
+                    margin-block-start: max(20vh, 8rem);
+                }
+
+                .hero__title {
+                    font-size: 6rem;
+                    max-width: 10ch;
+                    line-height: 1;
+                    font-style: italic;
+                    font-weight: 900;
+                    position: relative;
+
+                    >span {
+                        font-style: normal;
+                        font-size: 0.5em;
+                        display: block;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        background: black;
+                        z-index: -1;
+                        scale: 2;
+                        opacity: 0.5;
+                        filter: blur(5rem);
+                        translate: -50%;
+                    }
+                }
+                .parallax__foreground-front{
+                    filter: grayscale(1);
+                }
+            </style>
+
+
+            <div class="parallax">
+                <div class="hero">
+                    <div class="wrapper">
+                        <h1 class="hero__title">
+                            <span>The all new iAQUA</span> X-Jet™ Xtreme
+                        </h1>
+                        <button class="button">About Us</button>
+                    </div>
                 </div>
+
+                <img class="parallax__bg" src="assets/img/hero-bg.jpg" alt="" />
+                <img class="parallax__dust" src="assets/dust.webp" alt="" />
+                <img class="parallax__foreground-back" src="assets/foreground-back.webp" alt="" />
+                <img class="parallax__foreground-front" src="assets/foreground-front.webp" alt="" />
+                <img class="parallax__rays" src="assets/rays.webp" alt="" />
+            </div>
+       <!-- hero section start  -->
+            <!-- <section class="hero-digital-marketing pos-rel">
+           
+                <div class="dm-hero-img wow skewIn parallax-hero " data-depth="0.02" data-wow-delay="250ms">
+                    <img src="assets/img/hero-bg.jpg" alt="" class="hero">
+                </div>
+
                 <div class="container">
                     <div class="dm-hero-content pos-rel">
-                        <div class="xb-item--dm-image">
+                
+                        <div class="xb-item--dm-image parallax-hero" data-depth="0.1">
                             <img src="assets/img/digital-marketing/hero/hero-04.png" alt="" class="hero-img">
                         </div>
-                        <h1 class="xb-item--title wow fadeInUp">The all new iAQUA <br> <span class="sp-two">X-Jet™
-                                Xtreme</span> <span class="sp-one">Journey</span></h1>
+
+                        <h1 class="xb-item--title wow fadeInUp parallax-hero" data-depth="0.08">
+                            The all new iAQUA <br>
+                            <span class="sp-two">X-Jet™ Xtreme</span>
+                            <span class="sp-one">Journey</span>
+                        </h1>
+
                         <div class="hero-inner ul_li_between mt-40">
-                            <div class="xb-item--holder mt-20 wow fadeInUp" data-wow-delay="350ms"
-                                data-wow-duration=".7s">
-                                <div class="xb-item--dm-icon"><img src="assets/img/digital-marketing/icon/dm-hero.png"
-                                        alt=""></div>
-                                <p class="xb-item--content">The World’s fastest, most powerful <br> and most versatile
-                                    electric surfboard</p>
+                      
+                            <div class="xb-item--holder mt-20 wow fadeInUp parallax-hero" data-depth="0.05"
+                                data-wow-delay="350ms" data-wow-duration=".7s">
+                                <div class="xb-item--dm-icon">
+                                    <img src="assets/img/digital-marketing/icon/dm-hero.png" alt="">
+                                </div>
+                                <p class="xb-item--content">
+                                    The World’s fastest, most powerful <br>
+                                    and most versatile electric surfboard
+                                </p>
                             </div>
-                            <div class="dm-button xb-element-parallax mt-20">
+
+                  
+                            <div class="dm-button xb-element-parallax mt-20 parallax-hero" data-depth="0.04">
                                 <a href="project.html" class="circle-btn text-white port-btn dm-btn wow fadeInUp"
                                     data-wow-delay="450ms" data-wow-duration=".7s">
-                                    <div class="button__bg"></div> DISCOVER <br> MORE
+                                    <div class="button__bg"></div>
+                                    DISCOVER <br> MORE
                                 </a>
                             </div>
-                            <div class="dm-img mt-20 wow skewIn" data-wow-delay="250ms"><img
-                                    src="assets/img/digital-marketing/hero/hero-06.jpg" alt=""></div>
+
+                      
+                            <div class="dm-img mt-20 wow skewIn parallax-hero" data-depth="0.06" data-wow-delay="250ms">
+                                <img src="assets/img/digital-marketing/hero/hero-06.jpg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- hero section end  -->
-
-            <!-- dm-brand start -->
+            </section> -->
+            <!-- hero section end -->
             <section class="brand pt-165 pb-130">
                 <div class="container">
                     <span class="dm-brand-title d-block text-center mb-35">OUR NETWORK OF THE MOST INNOVATIVE</span>
@@ -304,7 +543,6 @@
                 </div>
             </section>
             <!-- dm-brand end -->
-
             <!-- service start -->
             <section class="service-4 pos-rel mb-130">
                 <div class="container">
@@ -391,7 +629,6 @@
                 </div>
             </section>
             <!-- service end -->
-
             <!-- about start  -->
             <section class="about pos-rel">
                 <div class="container">
@@ -442,7 +679,6 @@
                     data-background="assets/img/digital-marketing/about/about-img01.jpg"></div>
             </section>
             <!-- about end  -->
-
             <!-- portfolio start -->
             <section class="portfolio pt-130">
                 <div class="container">
@@ -498,7 +734,6 @@
                 </div>
             </section>
             <!-- portfolio end -->
-
             <!--  marquee start -->
             <section class="marquee-two pt-120">
                 <div class="dm-marquee db-marquee marquee-left">
@@ -824,7 +1059,6 @@
             </div>
         </footer>
         <!-- footer end -->
-
     </div>
 
     <!-- jquery include -->
@@ -853,6 +1087,53 @@
     <script src="assets/js/matter.js"></script>
     <script src="assets/js/throwable.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- jQuery and Ripples.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.hero').ripples({
+                resolution: 512,
+                dropRadius: 20,
+                perturbance: 0.04,
+            });
+        });
+    </script>
+
+
+    <script>
+        const parallaxItems = document.querySelectorAll('.parallax-hero');
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 2;
+            const y = (e.clientY / window.innerHeight - 0.5) * 2;
+
+            parallaxItems.forEach(el => {
+                const depth = parseFloat(el.dataset.depth) || 0.05;
+                gsap.to(el, {
+                    x: x * depth * 30,
+                    y: y * depth * 30,
+                    duration: 0.6,
+                    ease: "power3.out"
+                });
+            });
+        });
+    </script>
+
+    <script>
+        // Animate the header to appear from the top on page load
+        window.addEventListener('DOMContentLoaded', function () {
+            const header = document.querySelector('header.header-area');
+            if (header) {
+                gsap.set(header, { y: -100, opacity: 0 });
+                gsap.to(header, {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: "power2.out"
+                });
+            }
+        });
+    </script>
     <script>
         const heroImg = document.querySelector('.hero-img');
 
