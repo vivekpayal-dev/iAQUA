@@ -244,10 +244,14 @@
                     grid-template-areas: "stack";
                 }
 
-                .parallax>* {
+                .parallax>*:not(.xb-item--dm-image img) {
                     grid-area: stack;
                     animation: parallax linear;
                     animation-timeline: scroll();
+                }
+
+                .xb-item--dm-image {
+                    grid-area: unset !important;
                 }
 
                 .parallax>img {
@@ -430,29 +434,32 @@
                         translate: -50%;
                     }
                 }
-                .parallax__foreground-front{
-                    filter: grayscale(1);
-                }
             </style>
 
 
-            <div class="parallax">
+            <div class="parallax position-relative">
+                <!-- <div class="xb-item--dm-image parallax-hero" data-depth="0.1">
+                    <img src="assets/img/digital-marketing/hero/hero-04.png" alt="" class="hero-img">
+                </div> -->
+
                 <div class="hero">
-                    <div class="wrapper">
+                    <div class="wrapper hero-text-wrapper">
                         <h1 class="hero__title">
                             <span>The all new iAQUA</span> X-Jet™ Xtreme
                         </h1>
-                        <button class="button">About Us</button>
+                        <button class="button mt-4">About Us</button>
                     </div>
                 </div>
 
-                <img class="parallax__bg" src="assets/img/hero-bg.jpg" alt="" style="pointer-events: none;" />
+                <img class="parallax__bg" src="assets/img/hero-bg.png" alt="" style="pointer-events: none;" />
                 <img class="parallax__dust" src="assets/dust.webp" alt="" style="pointer-events: none;" />
-                <img class="parallax__foreground-back" src="assets/foreground-back.webp" alt="" style="pointer-events: none;" />
-                <img class="parallax__foreground-front" src="assets/foreground-front.webp" alt="" style="pointer-events: none;" />
+                <img class="parallax__foreground-back" src="assets/foreground-back.webp" alt=""
+                    style="pointer-events: none;" />
+                <img class="parallax__foreground-front" src="assets/foreground-front.webp" alt=""
+                    style="pointer-events: none;" />
                 <img class="parallax__rays" src="assets/rays.webp" alt="" style="pointer-events: none;" />
             </div>
-       <!-- hero section start  -->
+            <!-- hero section start  -->
             <!-- <section class="hero-digital-marketing pos-rel">
            
                 <div class="dm-hero-img wow skewIn parallax-hero " data-depth="0.02" data-wow-delay="250ms">
@@ -1090,31 +1097,41 @@
 
     <!-- jQuery and Ripples.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const parallaxItems = [
+            { selector: ".parallax__dust", speed: 0.5 },
+
+            { selector: ".parallax__rays", speed: 0.4 }
+        ];
+
+        parallaxItems.forEach(({ selector, speed }) => {
+            gsap.to(selector, {
+                y: () => -(window.innerHeight * speed),
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".parallax",
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true
+                }
+            });
+        });
+    </script>
+
     <script>
         $(document).ready(function () {
             $('.hero').ripples({
+                resolution: 256,             // Quality of the ripple (higher is better)
+                dropRadius: 20,              // Radius of ripple drops (bigger = larger ripples)
+                perturbance: 0.04,           // Ripple intensity (0 = still, 1 = crazy waves)
+                interactive: true,
             });
         });
     </script>
 
-
-    <script>
-        const parallaxItems = document.querySelectorAll('.parallax-hero');
-        document.addEventListener('mousemove', (e) => {
-            const x = (e.clientX / window.innerWidth - 0.5) * 2;
-            const y = (e.clientY / window.innerHeight - 0.5) * 2;
-
-            parallaxItems.forEach(el => {
-                const depth = parseFloat(el.dataset.depth) || 0.05;
-                gsap.to(el, {
-                    x: x * depth * 30,
-                    y: y * depth * 30,
-                    duration: 0.6,
-                    ease: "power3.out"
-                });
-            });
-        });
-    </script>
 
     <script>
         // Animate the header to appear from the top on page load
