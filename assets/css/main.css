@@ -4000,12 +4000,10 @@ body[data-aos-easing=ease] [data-aos] {
   font-size: 14px;
   font-weight: 600;
   color: var(--color-white);
-  letter-spacing: 1.96px;
   padding: 47px 0;
   position: relative;
   line-height: 22px;
   text-transform: uppercase;
-  letter-spacing: 2.94px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;

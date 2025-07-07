@@ -52,9 +52,9 @@
     </div>
     <!-- backtotop - end -->
     <!-- preloader start -->
-    <div id="xb-loadding" class="xb-loader">
+    <!-- <div id="xb-loadding" class="xb-loader">
         <div class="loading-spin"></div>
-    </div>
+    </div> -->
     <!-- preloader end -->
     <div class="body_wrap">
         <!-- header start -->
@@ -122,7 +122,10 @@
                                             <li><a href="#"><span>AquaDart Pro range</span></a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#"><span> Lithium Safety Store™</span></a></li>
+                                    <li><a href="#"><span>Investors</span></a></li>
+                                    <li><a href="#"><span>Find Dealers</span></a></li>
+                                    <li><a href="#"><span>Future Products</span></a></li>
+
                                     <li><a href="#"><span> Become a Dealer</span></a></li>
                                     <li><a href="#"><span> Contact us</span></a></li>
                                     <li><a href="#"><span> About us</span></a></li>
@@ -332,12 +335,9 @@
 
                 body {
                     margin: 0;
-                    font-family: "Rubik", sans-serif;
                     font-size: 1.25rem;
                     font-weight: 700;
-                    /* for demo only */
                     text-transform: uppercase;
-                    /* for demo only */
                 }
 
                 img {
@@ -437,11 +437,80 @@
             </style>
 
 
-            <div class="parallax position-relative">
-                <!-- <div class="xb-item--dm-image parallax-hero" data-depth="0.1">
-                    <img src="assets/img/digital-marketing/hero/hero-04.png" alt="" class="hero-img">
-                </div> -->
+            <style>
+                .product-hero-section {
+                    height: 140vh;
+                    background-color: black;
+                }
 
+                .hero-product-content {
+                    max-width: 1000px;
+                    margin: auto;
+                }
+
+                .spotlight-text {
+                    font-size: 6rem;
+                    letter-spacing: -1.2px;
+                    line-height: 100px;
+                    font-weight: 800;
+                    text-align: center;
+                    background: radial-gradient(circle at center, white, gray, black);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+
+                .spotlight-para {
+                    background: radial-gradient(circle at center, white, gray, black);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                }
+
+                .product-img-box {
+                    opacity: 0.2;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    pointer-events: none;
+                    width: 80%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+                .hero-product-content{
+                    margin-top: 12rem;
+                }
+            </style>
+            <section class="product-hero-section position-relative  d-flex justity-content-center ">
+                <div class="product-img-box position-absolute">
+                    <img src="./assets/img/digital-marketing/hero/hero-product.png" alt="" class="w-75">
+                </div>
+                <div class="container">
+                    <div class="hero-product-content text-center ">
+                        <h1 class="mb-4 spotlight-text">THE PINNACLE OF <br> <span>
+                                PERFORMANCE
+                            </span></h1>
+                        <p class="spotlight-para">Born from years of advanced underwater scooter development, the
+                            AquaDart Phantom distills the
+                            best of IAQUA into a breathtaking plece of engineering.
+                            It stands as the most powerful model we've ever created, designed to dominate the marine
+                            world.
+                        </p>
+                        <p class="spotlight-para">With over 3000 units sold worldwide and operations spanning all seven
+                            continents. the Phantom
+                            is the culmination of delivering unrivaled marine experiences.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- <div class="parallax position-relative">
                 <div class="hero">
                     <div class="wrapper hero-text-wrapper">
                         <h1 class="hero__title">
@@ -458,7 +527,7 @@
                 <img class="parallax__foreground-front" src="assets/foreground-front.webp" alt=""
                     style="pointer-events: none;" />
                 <img class="parallax__rays" src="assets/rays.webp" alt="" style="pointer-events: none;" />
-            </div>
+            </div> -->
             <!-- hero section start  -->
             <!-- <section class="hero-digital-marketing pos-rel">
            
@@ -512,7 +581,14 @@
             <!-- hero section end -->
             <section class="brand pt-90 pb-130">
                 <div class="container">
-                    <span class="dm-brand-title d-block text-center mb-35">OUR NETWORK OF THE MOST INNOVATIVE</span>
+                    <div class="section-title section-title--dm mb-55">
+                        <span class="sub-title mb-45 wow fadeInRight" data-wow-duration=".7s">Clients</span>
+                        <div class="clearfix"></div>
+                        <h3 class="title wow skewIn">OUR NETWORK OF THE MOST <br>
+                            <span>INNOVATIVE</span>
+                        </h3>
+                    </div>
+                    <span class="dm-brand-title d-block text-center mb-35"></span>
                     <div class="dm-brand-slider swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide dm-brand">
