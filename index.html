@@ -50,12 +50,6 @@
             <i class="far fa-arrow-up"></i>
         </a>
     </div>
-    <!-- backtotop - end -->
-    <!-- preloader start -->
-    <!-- <div id="xb-loadding" class="xb-loader">
-        <div class="loading-spin"></div>
-    </div> -->
-    <!-- preloader end -->
     <div class="body_wrap">
         <!-- header start -->
         <header id="xb-header-area" class="header-area header-style-four is-sticky">
@@ -68,51 +62,6 @@
                         <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
                             <nav class="main-menu collapse navbar-collapse">
                                 <ul>
-                                    <!-- <li class="menu-item-has-children active">
-                                        <a href="#!"><span>Pages</span></a>
-                                        <ul class="submenu">
-                                            <li class="active"><a href="#"><span>Digital Marketing</span></a>
-                                            </li>
-                                            <li><a href="home-2.html"><span>Branding Studio</span></a></li>
-                                            <li><a href="home-3.html"><span>Digital Studio</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#!"><span>Pages</span></a>
-                                        <ul class="submenu">
-                                            <li><a href="about.html"><span>About</span></a></li>
-                                            <li><a href="service.html"><span>Services</span></a></li>
-                                            <li><a href="#"><span>Service Details</span></a></li>
-                                            <li><a href="team.html"><span>Team</span></a></li>
-                                            <li><a href="team-single.html"><span>Team Details</span></a></li>
-                                            <li><a href="career.html"><span>Career</span></a></li>
-                                            <li><a href="career-single.html"><span>Career Details</span></a></li>
-                                            <li><a href="faq.html"><span>FAQ</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#!"><span>Portfolio</span></a>
-                                        <ul class="submenu">
-                                            <li><a href="project.html"><span>Portfolio</span></a></li>
-                                            <li><a href="project-single.html"><span>Portfolio Details</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#!"><span>Shop</span></a>
-                                        <ul class="submenu">
-                                            <li><a href="shop.html"><span>Products</span></a></li>
-                                            <li><a href="shop-single.html"><span>Single Product</span></a></li>
-                                            <li><a href="cart.html"><span>Cart</span></a></li>
-                                            <li><a href="checkout.html"><span>Checkout</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#!"><span>News</span></a>
-                                        <ul class="submenu">
-                                            <li><a href="blog.html"><span>News</span></a></li>
-                                            <li><a href="blog-single.html"><span>News Details</span></a></li>
-                                        </ul>
-                                    </li> -->
                                     <li><a href="#" class="active"><span>Home</span></a></li>
                                     <li><a href="#"><span> X-Jet™</span></a></li>
                                     <li class="menu-item-has-children"><a href="#"><span>AquaDart™</span></a>
@@ -435,8 +384,6 @@
                     }
                 }
             </style>
-
-
             <style>
                 .product-hero-section {
                     height: 140vh;
@@ -458,6 +405,7 @@
                     background-clip: text;
                     -webkit-background-clip: text;
                     color: transparent;
+                    will-change: auto;
                 }
 
                 .spotlight-para {
@@ -469,8 +417,14 @@
                     text-transform: capitalize;
                 }
 
+                .spotlight-text,
+                .product-img-box,
+                .spotlight-para {
+                    will-change: transform;
+                }
+
                 .product-img-box {
-                    opacity: 0.2;
+                    opacity: 0.1;
                     bottom: 0;
                     left: 50%;
                     transform: translateX(-50%);
@@ -481,7 +435,8 @@
                     align-items: center;
 
                 }
-                .hero-product-content{
+
+                .hero-product-content {
                     margin-top: 12rem;
                 }
             </style>
@@ -1173,6 +1128,69 @@
 
     <!-- jQuery and Ripples.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+
+    <script>
+
+        gsap.to(".spotlight-text", {
+            scale: 0.75,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".spotlight-text",
+                start: "top center",
+                end: "bottom top",
+                scrub: true
+            }
+        });
+        gsap.to(".spotlight-para", {
+            scale: 0.75,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".spotlight-text",
+                start: "top center",
+                end: "bottom top",
+                scrub: true
+            }
+        });
+
+
+        gsap.from(".spotlight-text", {
+            y: -100,
+            opacity: 0,
+            ease: "power4.out", // smoother and slower-feeling motion
+            duration: 2.5,
+            scrollTrigger: {
+                trigger: ".spotlight-text",
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
+
+        gsap.from(".spotlight-para", {
+            y: 100,
+            opacity: 0,
+            ease: "power4.out",
+            duration: 2.5,
+            scrollTrigger: {
+                trigger: ".spotlight-para",
+                start: "top 90%",
+                toggleActions: "play none none reverse"
+            }
+        });
+        gsap.from(".product-img-box", {
+            x: 500,
+            y: -300,
+            opacity: 0,
+            ease: "power5.out",
+            duration: 2.5,
+            rotation: 15,
+            scrollTrigger: {
+                trigger: ".product-img-box",
+                start: "top 90%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    </script>
+
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
