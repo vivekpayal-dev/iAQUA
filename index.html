@@ -18,30 +18,6 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Ripple.js/1.0.0/ripple.min.css" />
     <link rel="stylesheet" href="assets/css/main.css">
-    <style>
-        .header-area {
-            position: fixed;
-            top: 0px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.068);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .xb-header.xb-header-area-sticky.xb-sticky-stt.xb-header-fixed {
-            display: none;
-        }
-
-        body {
-            background-color: #090909;
-            background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%), linear-gradient(-45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.05) 75%), linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.05) 75%);
-            background-size: 6px 6px;
-            background-position: 0 0, 0 6px, 6px -6px, -6px 0px;
-            color: #ffffff;
-        }
-    </style>
 </head>
 
 <body>
@@ -76,7 +52,7 @@
                                     <li><a href="#"><span>Future Products</span></a></li>
 
                                     <li><a href="#"><span> Become a Dealer</span></a></li>
-                                    <li><a href="#"><span> Contact us</span></a></li>
+                                    <li><a href="./contact-us.html"><span> Contact us</span></a></li>
                                     <li><a href="#"><span> About us</span></a></li>
                                 </ul>
                             </nav>
@@ -186,260 +162,7 @@
         <!-- overlay menu end -->
         <!-- main area start  -->
         <main>
-            <style>
-                .parallax {
-                    /* overflow: hidden; */
-                    position: relative;
-                    z-index: 0;
-                    min-height: 75vh;
-                    display: grid;
-                    grid-template-areas: "stack";
-                }
 
-                .parallax>*:not(.xb-item--dm-image img) {
-                    grid-area: stack;
-                    animation: parallax linear;
-                    animation-timeline: scroll();
-                }
-
-                .xb-item--dm-image {
-                    grid-area: unset !important;
-                }
-
-                .parallax>img {
-                    width: 100%;
-                }
-
-                .primary-header,
-                .hero {
-                    --parallax-speed: 10;
-                    z-index: 10;
-                }
-
-                .parallax__bg {
-                    --parallax-speed: -10;
-
-                    z-index: 1;
-                    min-height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                }
-
-                .parallax__dust {
-                    --parallax-speed: -20;
-                    z-index: 2;
-                }
-
-                .parallax__luna {
-                    --parallax-speed: 50;
-                    z-index: 3;
-                }
-
-                .parallax__manny {
-                    --parallax-speed: 30;
-                    z-index: 4;
-                }
-
-                .parallax__jax {
-                    --parallax-speed: 10;
-                    z-index: 5;
-                }
-
-                .parallax__rays {
-                    --parallax-speed: 50;
-                    z-index: 3;
-                }
-
-                .parallax__foreground-front,
-                .parallax__foreground-back {
-                    z-index: 999;
-                    align-self: end;
-                }
-
-                .parallax__foreground-back {
-                    transform: scaleY(1.2);
-                    transform-origin: bottom;
-                    mix-blend-mode: hard-light;
-                }
-
-                .main-content {
-                    position: relative;
-                    /* z-index: 1; */
-                    background: hsl(238, 100%, 6%);
-                    padding-block: 6rem;
-                }
-
-                @keyframes parallax {
-                    to {
-                        transform:
-                            translateY(calc(var(--parallax-speed) * 200px));
-                    }
-                }
-
-                /* general styling */
-
-                html {
-                    color-scheme: dark;
-                }
-
-                body {
-                    margin: 0;
-                    font-size: 1.25rem;
-                    font-weight: 700;
-                    text-transform: uppercase;
-                }
-
-                img {
-                    display: block;
-                    max-width: 100%;
-                }
-
-                .wrapper {
-                    width: min(65rem, 100% - 4rem);
-                    margin-inline: auto;
-                }
-
-                .flex-group {
-                    display: flex;
-                    gap: 1rem;
-                }
-
-                .button {
-                    font: inherit;
-                    font-style: italic;
-                    text-transform: uppercase;
-                    background: hsl(279, 75%, 59%);
-                    padding: 1em 2em;
-                    border: 0;
-                    border-radius: 0.125em;
-                }
-
-                .primary-header {
-                    padding-block: 2rem;
-                }
-
-                .primary-header__inner {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-
-                .primary-nav ul {
-                    flex: 1;
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-                    display: flex;
-                    gap: 1rem;
-                    justify-content: space-between;
-                }
-
-                .primary-nav a {
-                    color: white;
-                    font-weight: 700;
-                    text-decoration: none;
-                }
-
-                .logo {
-                    max-width: 100px;
-                    position: relative;
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        inset: -3rem;
-                        z-index: -1;
-                        background: radial-gradient(hsl(0 0% 100% / 0.5), transparent 70%);
-                    }
-                }
-
-                .hero {
-                    margin-block-start: max(20vh, 8rem);
-                }
-
-                .hero__title {
-                    font-size: 6rem;
-                    max-width: 10ch;
-                    line-height: 1;
-                    font-style: italic;
-                    font-weight: 900;
-                    position: relative;
-
-                    >span {
-                        font-style: normal;
-                        font-size: 0.5em;
-                        display: block;
-                    }
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        inset: 0;
-                        background: black;
-                        z-index: -1;
-                        scale: 2;
-                        opacity: 0.5;
-                        filter: blur(5rem);
-                        translate: -50%;
-                    }
-                }
-            </style>
-            <style>
-                .product-hero-section {
-                    height: 140vh;
-                    background-color: black;
-                }
-
-                .hero-product-content {
-                    max-width: 1000px;
-                    margin: auto;
-                }
-
-                .spotlight-text {
-                    font-size: 6rem;
-                    letter-spacing: -1.2px;
-                    line-height: 100px;
-                    font-weight: 800;
-                    text-align: center;
-                    background: radial-gradient(circle at center, white, gray, black);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    color: transparent;
-                    will-change: auto;
-                }
-
-                .spotlight-para {
-                    background: radial-gradient(circle at center, white, gray, black);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    color: transparent;
-                    font-weight: 400;
-                    text-transform: capitalize;
-                }
-
-                .spotlight-text,
-                .product-img-box,
-                .spotlight-para {
-                    will-change: transform;
-                }
-
-                .product-img-box {
-                    opacity: 0.1;
-                    bottom: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    pointer-events: none;
-                    width: 80%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                }
-
-                .hero-product-content {
-                    margin-top: 12rem;
-                }
-            </style>
             <section class="product-hero-section position-relative  d-flex justity-content-center ">
                 <div class="product-img-box position-absolute">
                     <img src="./assets/img/digital-marketing/hero/hero-product.png" alt="" class="w-75">
@@ -533,139 +256,33 @@
                     </div>
                 </div>
             </section> -->
+            <style>
+                .text-captilize {
+                    text-transform: capitalize;
+                    font-size: 18px;
+                    color: #aeaeae;
+                    max-width: 800px;
+                    margin-inline: auto;
+                }
+            </style>
+
             <!-- hero section end -->
-            <section class="brand pt-90 pb-130">
+            <section class="brand pt-90 pb-60">
                 <div class="container">
-                    <div class="section-title section-title--dm mb-55">
-                        <span class="sub-title mb-45 wow fadeInRight" data-wow-duration=".7s">Clients</span>
-                        <div class="clearfix"></div>
-                        <h3 class="title wow skewIn">OUR NETWORK OF THE MOST <br>
-                            <span>INNOVATIVE</span>
-                        </h3>
+                    <div class="section-title section-title--dm mb-55 d-flex justify-content-center flex-column gap-3">
+                        <h3 class="title wow skewIn text-center">Born to Perform</h3>
+                        <p class="text-center text-captilize">Meet the all-new AquaDart Phantom 720. Pure carbon fiber
+                            body. Single,
+                            ultra-capacity
+                            battery. Sharper thrust. Bold colours. Just under 30 kg.
+                        </p>
                     </div>
                     <span class="dm-brand-title d-block text-center mb-35"></span>
-                    <div class="dm-brand-slider swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide dm-brand">
-                                <a href="#!"><img src="assets/img/digital-marketing/dm-brand/dm-brand01.png" alt=""></a>
-                            </div>
-                            <div class="swiper-slide dm-brand">
-                                <a href="#!"><img src="assets/img/digital-marketing/dm-brand/dm-brand02.png" alt=""></a>
-                            </div>
-                            <div class="swiper-slide dm-brand">
-                                <a href="#!"><img src="assets/img/digital-marketing/dm-brand/dm-brand03.png" alt=""></a>
-                            </div>
-                            <div class="swiper-slide dm-brand">
-                                <a href="#!"><img src="assets/img/digital-marketing/dm-brand/dm-brand04.png" alt=""></a>
-                            </div>
-                            <div class="swiper-slide dm-brand">
-                                <a href="#!"><img src="assets/img/digital-marketing/dm-brand/dm-brand05.png" alt=""></a>
-                            </div>
-                            <div class="swiper-slide dm-brand">
-                                <a href="#!"><img src="assets/img/digital-marketing/dm-brand/dm-brand06.png" alt=""></a>
-                            </div>
-                            <div class="swiper-slide dm-brand">
-                                <a href="#!"><img src="assets/img/digital-marketing/dm-brand/dm-brand03.png" alt=""></a>
-                            </div>
-                            <div class="swiper-slide dm-brand">
-                                <a href="#!"><img src="assets/img/digital-marketing/dm-brand/dm-brand04.png" alt=""></a>
-                            </div>
-                            <div class="swiper-slide dm-brand">
-                                <a href="#!"><img src="assets/img/digital-marketing/dm-brand/dm-brand01.png" alt=""></a>
-                            </div>
-                            <div class="swiper-slide dm-brand">
-                                <a href="#!"><img src="assets/img/digital-marketing/dm-brand/dm-brand02.png" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
             <!-- dm-brand end -->
             <!-- service start -->
-            <section class="service-4 pos-rel mb-130">
-                <div class="container">
-                    <div class="section-title section-title--dm mb-55">
-                        <span class="sub-title mb-45 wow fadeInRight" data-wow-duration=".7s">services</span>
-                        <div class="clearfix"></div>
-                        <h3 class="title wow skewIn">The Revolutionary <br>
-                            <span>AquaDart Phantom 750R</span>
-                        </h3>
-                    </div>
-                </div>
-                <div class="services-inner pos-rel">
-                    <div class="services-bg bg_img"
-                        data-background="assets/img/digital-marketing/dm-service/srv-bg.jpg"></div>
-                    <div class="dm-service-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide dm-service">
-                                <div class="xb-item--holder">
-                                    <h2 class="xb-item--title"><a href="#">.01 <br> AquaDart Phantom 750R Range
-                                        </a>
-                                    </h2>
-                                    <div class="xb-item--content">Discover the new AquaDart Nano range in 4 colours for
-                                        you to choose from…</div>
-                                </div>
-                                <div class="xb-item--image"><img
-                                        src="https://www.iaquawatercraft.com/images/AquaDart_Nano_Studio_Product_Shots/1200x883/AquaDart_Nano_Corsica_Orange-Cover-1200x833.jpg"
-                                        alt=""></div>
-                                <div class="xb-item--srv_link">
-                                    <a href="#">Discover More <span><img
-                                                src="assets/img/digital-marketing/icon/dm-srv.png" alt=""></span></a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide dm-service">
-                                <div class="xb-item--holder">
-                                    <h2 class="xb-item--title"><a href="#">.02 <br>AquaDart Phantom 750R</a></h2>
-                                    <div class="xb-item--content">Introducing the all-new AquaDart Phantom 750R with
-                                        DualJet™ Propulsion Technology. No other dive scooter comes close to matching
-                                        its incredible power-to-weight ratio</div>
-                                </div>
-                                <div class="xb-item--image"><img
-                                        src="https://www.iaquawatercraft.com/images/AquaDart_Nano_Studio_Product_Shots/1200x883/AquaDart_Nano_Corsica_Orange-Cover-1200x833.jpg"
-                                        alt=""></div>
-                                <div class="xb-item--srv_link">
-                                    <a href="#">Discover More <span><img
-                                                src="assets/img/digital-marketing/icon/dm-srv.png" alt=""></span></a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide dm-service">
-                                <div class="xb-item--holder">
-                                    <h2 class="xb-item--title"><a href="#">.03 <br>AquaDart Phantom 750R Design & <br>
-                                            Engineering
-                                        </a></h2>
-                                    <div class="xb-item--content">Meticulously designed to be lighter, more efficient
-                                        and way more fun than other sea scooters...
-                                    </div>
-                                </div>
-                                <div class="xb-item--image"><img
-                                        src="https://www.iaquagroup.com/templates/yootheme/cache/01/720Xtreme-hero-010bee27.webp"
-                                        alt=""></div>
-                                <div class="xb-item--srv_link">
-                                    <a href="#">Discover More <span><img
-                                                src="assets/img/digital-marketing/icon/dm-srv.png" alt=""></span></a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide dm-service">
-                                <div class="xb-item--holder">
-                                    <h2 class="xb-item--title"><a href="#">.04 <br> AquaDart Phantom 750R
-                                            Performance</a>
-                                    </h2>
-                                    <div class="xb-item--content">Winner of the World's Best Luxury Water Toy, iAqua
-                                        bring you the world's most powerful, most competitively priced dive scooter.
-                                    </div>
-                                </div>
-                                <div class="xb-item--image"><img
-                                        src="https://www.iaquagroup.com/templates/yootheme/cache/01/NanoVideoGalleryPage-hero-016f3dce.webp"
-                                        alt=""></div>
-                                <div class="xb-item--srv_link">
-                                    <a href="#">Discover More <span><img
-                                                src="assets/img/digital-marketing/icon/dm-srv.png" alt=""></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
             <!-- service end -->
             <!-- about start  -->
             <section class="about pos-rel">
