@@ -421,6 +421,9 @@
                 }
             </style>
 
+
+
+
             <section class="services-cards swiper-container mb-60">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -482,7 +485,7 @@
                                         gsap.to(".cta-slide__content-wrapper.animate-from-right", {
                                             x: 0,
                                             opacity: 1,
-                                            duration: 2, 
+                                            duration: 2,
                                             ease: "power4.out",
                                             scrollTrigger: {
                                                 trigger: ".cta-slide__content-wrapper.animate-from-right",
@@ -496,7 +499,364 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <h1>Helo</h1>
+                        <div class="services-slider-content">
+                            <div class="service-slider-img animate-from-left">
+                                <img src="https://media.istockphoto.com/id/98462741/photo/woman-on-a-jet-ski-in-the-ocean-during-the-sunset.jpg?s=612x612&w=0&k=20&c=g9HmcHRRymmuvrLauI_PQT0R50kW0rPOohRnCOcSHDY="
+                                    alt="" class="w-100">
+                            </div>
+                            <div class="cta-slide__content-wrapper animate-from-right">
+                                <div class="cta-slide__content position-relative">
+                                    <div class="cta-slide__slide-number">01</div>
+                                    <h3 class="cta-slide__header">Rec Lite - JetBlaster Series</h3>
+                                    <h6 class="cta-slide__subheader">Starting at $7,999</h6>
+                                    <p class="cta-slide__description body-2">The compact-sized, ultra-lightweight
+                                        JetBlaster Series is also Yamaha's most affordable two and three-person
+                                        WaveRunners<sup>®</sup>. It's designed for exhilarating, playful riding, powered
+                                        by Yamaha's 1L TR-1 High Output marine engine.</p>
+                                    <div class="product-option mt-4">
+                                        <form class="form">
+                                            <div class="product-row">
+                                                <div class="add-to-cart-btn">
+                                                    <button class="xb-btn"><i class="far fa-shopping-bag"></i> Add to
+                                                        cart</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <style>
+                                .animate-from-left {
+                                    opacity: 0;
+                                    transform: translateX(-80px);
+                                }
+
+                                .animate-from-right {
+                                    opacity: 0;
+                                    transform: translateX(80px);
+                                }
+                            </style>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    if (window.gsap && window.ScrollTrigger) {
+                                        gsap.registerPlugin(ScrollTrigger);
+
+                                        gsap.to(".service-slider-img.animate-from-left", {
+                                            x: 0,
+                                            opacity: 1,
+                                            duration: 0.6, // faster
+                                            ease: "power2.out",
+                                            scrollTrigger: {
+                                                trigger: ".service-slider-img.animate-from-left",
+                                                start: "top 80%",
+                                                toggleActions: "play none none reverse"
+                                            }
+                                        });
+
+                                        // Slow animation for content (from right)
+                                        gsap.to(".cta-slide__content-wrapper.animate-from-right", {
+                                            x: 0,
+                                            opacity: 1,
+                                            duration: 2,
+                                            ease: "power4.out",
+                                            scrollTrigger: {
+                                                trigger: ".cta-slide__content-wrapper.animate-from-right",
+                                                start: "top 80%",
+                                                toggleActions: "play none none reverse"
+                                            }
+                                        });
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="services-slider-content">
+                            <div class="service-slider-img animate-from-left">
+                                <img src="https://media.istockphoto.com/id/98462741/photo/woman-on-a-jet-ski-in-the-ocean-during-the-sunset.jpg?s=612x612&w=0&k=20&c=g9HmcHRRymmuvrLauI_PQT0R50kW0rPOohRnCOcSHDY="
+                                    alt="" class="w-100">
+                            </div>
+                            <div class="cta-slide__content-wrapper animate-from-right">
+                                <div class="cta-slide__content position-relative">
+                                    <div class="cta-slide__slide-number">01</div>
+                                    <h3 class="cta-slide__header">Rec Lite - JetBlaster Series</h3>
+                                    <h6 class="cta-slide__subheader">Starting at $7,999</h6>
+                                    <p class="cta-slide__description body-2">The compact-sized, ultra-lightweight
+                                        JetBlaster Series is also Yamaha's most affordable two and three-person
+                                        WaveRunners<sup>®</sup>. It's designed for exhilarating, playful riding, powered
+                                        by Yamaha's 1L TR-1 High Output marine engine.</p>
+                                    <div class="product-option mt-4">
+                                        <form class="form">
+                                            <div class="product-row">
+                                                <div class="add-to-cart-btn">
+                                                    <button class="xb-btn"><i class="far fa-shopping-bag"></i> Add to
+                                                        cart</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <style>
+                                .animate-from-left {
+                                    opacity: 0;
+                                    transform: translateX(-80px);
+                                }
+
+                                .animate-from-right {
+                                    opacity: 0;
+                                    transform: translateX(80px);
+                                }
+                            </style>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    if (window.gsap && window.ScrollTrigger) {
+                                        gsap.registerPlugin(ScrollTrigger);
+
+                                        gsap.to(".service-slider-img.animate-from-left", {
+                                            x: 0,
+                                            opacity: 1,
+                                            duration: 0.6, // faster
+                                            ease: "power2.out",
+                                            scrollTrigger: {
+                                                trigger: ".service-slider-img.animate-from-left",
+                                                start: "top 80%",
+                                                toggleActions: "play none none reverse"
+                                            }
+                                        });
+
+                                        // Slow animation for content (from right)
+                                        gsap.to(".cta-slide__content-wrapper.animate-from-right", {
+                                            x: 0,
+                                            opacity: 1,
+                                            duration: 2,
+                                            ease: "power4.out",
+                                            scrollTrigger: {
+                                                trigger: ".cta-slide__content-wrapper.animate-from-right",
+                                                start: "top 80%",
+                                                toggleActions: "play none none reverse"
+                                            }
+                                        });
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="services-slider-content">
+                            <div class="service-slider-img animate-from-left">
+                                <img src="https://media.istockphoto.com/id/98462741/photo/woman-on-a-jet-ski-in-the-ocean-during-the-sunset.jpg?s=612x612&w=0&k=20&c=g9HmcHRRymmuvrLauI_PQT0R50kW0rPOohRnCOcSHDY="
+                                    alt="" class="w-100">
+                            </div>
+                            <div class="cta-slide__content-wrapper animate-from-right">
+                                <div class="cta-slide__content position-relative">
+                                    <div class="cta-slide__slide-number">01</div>
+                                    <h3 class="cta-slide__header">Rec Lite - JetBlaster Series</h3>
+                                    <h6 class="cta-slide__subheader">Starting at $7,999</h6>
+                                    <p class="cta-slide__description body-2">The compact-sized, ultra-lightweight
+                                        JetBlaster Series is also Yamaha's most affordable two and three-person
+                                        WaveRunners<sup>®</sup>. It's designed for exhilarating, playful riding, powered
+                                        by Yamaha's 1L TR-1 High Output marine engine.</p>
+                                    <div class="product-option mt-4">
+                                        <form class="form">
+                                            <div class="product-row">
+                                                <div class="add-to-cart-btn">
+                                                    <button class="xb-btn"><i class="far fa-shopping-bag"></i> Add to
+                                                        cart</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <style>
+                                .animate-from-left {
+                                    opacity: 0;
+                                    transform: translateX(-80px);
+                                }
+
+                                .animate-from-right {
+                                    opacity: 0;
+                                    transform: translateX(80px);
+                                }
+                            </style>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    if (window.gsap && window.ScrollTrigger) {
+                                        gsap.registerPlugin(ScrollTrigger);
+
+                                        gsap.to(".service-slider-img.animate-from-left", {
+                                            x: 0,
+                                            opacity: 1,
+                                            duration: 0.6, // faster
+                                            ease: "power2.out",
+                                            scrollTrigger: {
+                                                trigger: ".service-slider-img.animate-from-left",
+                                                start: "top 80%",
+                                                toggleActions: "play none none reverse"
+                                            }
+                                        });
+
+                                        // Slow animation for content (from right)
+                                        gsap.to(".cta-slide__content-wrapper.animate-from-right", {
+                                            x: 0,
+                                            opacity: 1,
+                                            duration: 2,
+                                            ease: "power4.out",
+                                            scrollTrigger: {
+                                                trigger: ".cta-slide__content-wrapper.animate-from-right",
+                                                start: "top 80%",
+                                                toggleActions: "play none none reverse"
+                                            }
+                                        });
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="services-slider-content">
+                            <div class="service-slider-img animate-from-left">
+                                <img src="https://media.istockphoto.com/id/98462741/photo/woman-on-a-jet-ski-in-the-ocean-during-the-sunset.jpg?s=612x612&w=0&k=20&c=g9HmcHRRymmuvrLauI_PQT0R50kW0rPOohRnCOcSHDY="
+                                    alt="" class="w-100">
+                            </div>
+                            <div class="cta-slide__content-wrapper animate-from-right">
+                                <div class="cta-slide__content position-relative">
+                                    <div class="cta-slide__slide-number">01</div>
+                                    <h3 class="cta-slide__header">Rec Lite - JetBlaster Series</h3>
+                                    <h6 class="cta-slide__subheader">Starting at $7,999</h6>
+                                    <p class="cta-slide__description body-2">The compact-sized, ultra-lightweight
+                                        JetBlaster Series is also Yamaha's most affordable two and three-person
+                                        WaveRunners<sup>®</sup>. It's designed for exhilarating, playful riding, powered
+                                        by Yamaha's 1L TR-1 High Output marine engine.</p>
+                                    <div class="product-option mt-4">
+                                        <form class="form">
+                                            <div class="product-row">
+                                                <div class="add-to-cart-btn">
+                                                    <button class="xb-btn"><i class="far fa-shopping-bag"></i> Add to
+                                                        cart</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <style>
+                                .animate-from-left {
+                                    opacity: 0;
+                                    transform: translateX(-80px);
+                                }
+
+                                .animate-from-right {
+                                    opacity: 0;
+                                    transform: translateX(80px);
+                                }
+                            </style>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    if (window.gsap && window.ScrollTrigger) {
+                                        gsap.registerPlugin(ScrollTrigger);
+
+                                        gsap.to(".service-slider-img.animate-from-left", {
+                                            x: 0,
+                                            opacity: 1,
+                                            duration: 0.6, // faster
+                                            ease: "power2.out",
+                                            scrollTrigger: {
+                                                trigger: ".service-slider-img.animate-from-left",
+                                                start: "top 80%",
+                                                toggleActions: "play none none reverse"
+                                            }
+                                        });
+
+                                        // Slow animation for content (from right)
+                                        gsap.to(".cta-slide__content-wrapper.animate-from-right", {
+                                            x: 0,
+                                            opacity: 1,
+                                            duration: 2,
+                                            ease: "power4.out",
+                                            scrollTrigger: {
+                                                trigger: ".cta-slide__content-wrapper.animate-from-right",
+                                                start: "top 80%",
+                                                toggleActions: "play none none reverse"
+                                            }
+                                        });
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="services-slider-content">
+                            <div class="service-slider-img animate-from-left">
+                                <img src="https://media.istockphoto.com/id/98462741/photo/woman-on-a-jet-ski-in-the-ocean-during-the-sunset.jpg?s=612x612&w=0&k=20&c=g9HmcHRRymmuvrLauI_PQT0R50kW0rPOohRnCOcSHDY="
+                                    alt="" class="w-100">
+                            </div>
+                            <div class="cta-slide__content-wrapper animate-from-right">
+                                <div class="cta-slide__content position-relative">
+                                    <div class="cta-slide__slide-number">01</div>
+                                    <h3 class="cta-slide__header">Rec Lite - JetBlaster Series</h3>
+                                    <h6 class="cta-slide__subheader">Starting at $7,999</h6>
+                                    <p class="cta-slide__description body-2">The compact-sized, ultra-lightweight
+                                        JetBlaster Series is also Yamaha's most affordable two and three-person
+                                        WaveRunners<sup>®</sup>. It's designed for exhilarating, playful riding, powered
+                                        by Yamaha's 1L TR-1 High Output marine engine.</p>
+                                    <div class="product-option mt-4">
+                                        <form class="form">
+                                            <div class="product-row">
+                                                <div class="add-to-cart-btn">
+                                                    <button class="xb-btn"><i class="far fa-shopping-bag"></i> Add to
+                                                        cart</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <style>
+                                .animate-from-left {
+                                    opacity: 0;
+                                    transform: translateX(-80px);
+                                }
+
+                                .animate-from-right {
+                                    opacity: 0;
+                                    transform: translateX(80px);
+                                }
+                            </style>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    if (window.gsap && window.ScrollTrigger) {
+                                        gsap.registerPlugin(ScrollTrigger);
+
+                                        gsap.to(".service-slider-img.animate-from-left", {
+                                            x: 0,
+                                            opacity: 1,
+                                            duration: 0.6, // faster
+                                            ease: "power2.out",
+                                            scrollTrigger: {
+                                                trigger: ".service-slider-img.animate-from-left",
+                                                start: "top 80%",
+                                                toggleActions: "play none none reverse"
+                                            }
+                                        });
+
+                                        // Slow animation for content (from right)
+                                        gsap.to(".cta-slide__content-wrapper.animate-from-right", {
+                                            x: 0,
+                                            opacity: 1,
+                                            duration: 2,
+                                            ease: "power4.out",
+                                            scrollTrigger: {
+                                                trigger: ".cta-slide__content-wrapper.animate-from-right",
+                                                start: "top 80%",
+                                                toggleActions: "play none none reverse"
+                                            }
+                                        });
+                                    }
+                                });
+                            </script>
+                        </div>
                     </div>
                 </div>
                 <!-- Swiper Navigation -->
@@ -508,370 +868,70 @@
                 </div>
             </section>
 
-            <!-- service end -->
-            <!-- about start  -->
-            <section class="about pos-rel">
-                <div class="container">
-                    <div class="section-title section-title--dm mb-195">
-                        <span class="sub-title mb-45 wow fadeInRight" data-wow-duration=".7s">about agency</span>
-                        <div class="clearfix"></div>
-                        <h3 class="title wow skewIn">create <span>special Things</span></h3>
-                    </div>
-                    <div class="section-title">
-                        <h3 class="title title-dm"><span>Join the Ranks of Successful</span> <span>Brands by Partnering
-                                with</span> <span>our <span class="sp-one">Creative Agency</span></span></h3>
-                    </div>
-                    <div class="dm-about--counter pt-80">
-                        <div class="dm-about--wrapper">
-                            <div class="inner ul_li mb-55">
-                                <div class="icon">
-                                    <img src="assets/img/icon/hero01.svg" alt="">
-                                </div>
-                                <div class="holder">
-                                    <h3 class="number xb-odm"><span class="xbo" data-count="80">00</span><span
-                                            class="suffix">K</span></h3>
-                                    <p class="content">Happy Customer</p>
-                                </div>
-                            </div>
-                            <div class="inner ul_li mb-55">
-                                <div class="icon">
-                                    <img src="assets/img/icon/hero02.svg" alt="">
-                                </div>
-                                <div class="holder">
-                                    <h3 class="number xb-odm"><span class="xbo" data-count="125">00</span></h3>
-                                    <p class="content">Countries</p>
+            <section class="market-section">
+                <div class="container-fluid px-0 h-100">
+                    <div class="row h-100 market-row">
+                        <div class="col-md-6 px-0 h-100">
+                            <div class="market-img position-relative h-100 overlay-none text-center">
+                                <div class="market-img-content main">
+                                    <h4>Dealer locator</h4>
+                                    <p>Leave your contact details and I'll send you a free list of the latest 20
+                                        properties sold in your neighbourhood
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <span class="dm-about--content d-block pt-45">
-                            Our vision is to be a trailblazing force in the world of web design and development,
-                            recognized for our unwavering commitment to excellence, integrity, and customer
-                            satisfaction.
-                        </span>
-                    </div>
-                    <div class="dm-about--button xb-element-parallax">
-                        <a href="about.html" class="circle-btn text-white port-btn about-btn dm-btn">
-                            <div class="button__bg"></div>Explore <br> more
-                        </a>
-                    </div>
-                </div>
-                <div class="dm-about--image bg_img"
-                    data-background="assets/img/digital-marketing/about/about-img01.jpg"></div>
-            </section>
-            <!-- about end  -->
-            <!-- portfolio start -->
-            <section class="portfolio pt-130">
-                <div class="container">
-                    <div class="section-title section-title--dm mb-30">
-                        <span class="sub-title mb-45 wow fadeInRight" data-wow-duration=".7s">Portfolio</span>
-                        <div class="ul_li_between align-items-end">
-                            <h3 class="title wow skewIn mb-20">Check out our toys in<br> <span>action</span></h3>
-                            <a href="project.html" class="d-block dm-port-link mb-20">SEE MORE WORK <svg width="19"
-                                    height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M18.9981 2.06238C19.0325 1.51117 18.6136 1.0364 18.0624 1.00195L9.07991 0.440543C8.5287 0.406092 8.05392 0.825008 8.01947 1.37622C7.98502 1.92743 8.40394 2.4022 8.95515 2.43665L16.9396 2.93567L16.4405 10.9201C16.4061 11.4713 16.825 11.9461 17.3762 11.9805C17.9274 12.015 18.4022 11.5961 18.4366 11.0449L18.9981 2.06238ZM1.66162 17.7498L18.6616 2.74984L17.3384 1.25016L0.338378 16.2502L1.66162 17.7498Z"
-                                        fill="white" />
-                                </svg></a>
-                        </div>
-                    </div>
-                    <div class="dm-portfolio-slider swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide dm-portfolio xb-hover-zoom">
-                                <div class="xb-item--img">
-                                    <a href="project-single.html"><img
-                                            src="assets/img/digital-marketing/portfolio/port-img01.jpg" alt=""></a>
-                                </div>
-                                <div class="xb-item--holder text-center">
-                                    <a class="xb-item--title" href="project-single.html">Creative Brand design</a>
-                                    <a class="xb-item--desig" href="project-single.html">Design, Development &
-                                        Identity</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide dm-portfolio xb-hover-zoom">
-                                <div class="xb-item--img">
-                                    <a href="project-single.html"><img
-                                            src="assets/img/digital-marketing/portfolio/port-img02.jpg" alt=""></a>
-                                </div>
-                                <div class="xb-item--holder text-center">
-                                    <a class="xb-item--title" href="project-single.html">Momentum Website design</a>
-                                    <a class="xb-item--desig" href="project-single.html">Design, Developrnent & 3D
-                                        Motion</a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide dm-portfolio xb-hover-zoom">
-                                <div class="xb-item--img">
-                                    <a href="project-single.html"><img
-                                            src="assets/img/digital-marketing/portfolio/port-img03.jpg" alt=""></a>
-                                </div>
-                                <div class="xb-item--holder text-center">
-                                    <a class="xb-item--title" href="project-single.html">Creative Brand design</a>
-                                    <a class="xb-item--desig" href="project-single.html">Design, Development &
-                                        Identity</a>
+                        <div class="col-md-6 px-0 h-100">
+                            <div class="market-img position-relative h-100">
+                                <img src="https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2018/12/21/Photos/Processed/house-k8LB--621x414@LiveMint-0840.jpg"
+                                    alt="" class="h-100 w-100">
+                                <div class="market-img-content">
+                                    <h4>Get a free market opinion.
+                                    </h4>
+                                    <button class="xb-btn text-white">Become a dealer.</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- portfolio end -->
-            <!--  marquee start -->
-            <section class="marquee-two pt-120">
-                <div class="dm-marquee db-marquee marquee-left">
-                    <div class="marquee-item">IAQUA</div>
-                    <div class="marquee-item">IAQUA</div>
-                    <div class="marquee-item">IAQUA</div>
-                    <div class="marquee-item">IAQUA</div>
-                    <div class="marquee-item">IAQUA</div>
-                    <div class="marquee-item">IAQUA</div>
-                    <div class="marquee-item">IAQUA</div>
-                    <div class="marquee-item">IAQUA</div>
-                    <div class="marquee-item">IAQUA</div>
-                    <div class="marquee-item">IAQUA</div>
-                </div>
-            </section>
-            <!--  marquee end -->
 
-            <!-- video start -->
-            <section class="video pos-rel">
-                <img src="assets/img/digital-marketing/video-bg/dm-video.png" alt="">
-                <div class="dm-video">
-                    <a class="play-btn popup-video" href="javascript:void(0)"><img
-                            src="assets/img/digital-marketing/icon/dm-play.svg" alt=""></a>
-                    <span class="dm-text">how it works</span>
-                </div>
-            </section>
-            <!-- video end -->
 
-            <!-- testimonial start -->
-            <section class="testimonial pt-60">
-                <div class="container">
-                    <div class="section-title section-title--dm mb-30">
-                        <span class="sub-title mb-45 wow fadeInRight" data-wow-duration=".7s">testimonial</span>
-                        <div class="ul_li_between">
-                            <h3 class="title mb-20 wow skewIn">Happy Client <br> <span>feedback</span></h3>
-                            <p class="content dm-por-content mb-20 wow fadeInRight" data-wow-delay="250ms"
-                                data-wow-duration=".7s">Their words are a testament to our commitment to excellence and
-                                our ability to bring
-                                their visions to life. Read on to see how we've made a lasting impact on their brands
-                                and projects.</p>
+            <section class="footer-contact contact-us-section">
+                <div class="w-layout-blockcontainer main-container w-container">
+                    <div class="inner-footer">
+                        <a data-w-id="darkyn02" href="mailto:test@gmail.com" class="mail-link" ">Ready to Own the Water</a>
+                        <a data-w-id=" darkyn03" href="tel:+5(123)456-78-90" class="phone-link">Be among the first to
+                            secure the AquaDart Phantom 720 or SeaFlayer</a>
+                        <div data-w-id="darkyn04" class="socials" ">
+                            <a href=" #" target="_blank" class="social-link w-inline-block">
+                            <div class="social-text">linkedin</div>
+                            <img src="	https://max-themes.net/demos/darkyn/images/arrow-down-right.png" alt=""
+                                class="social-arrow">
+                            </a>
+                            <a href="#" target="_blank" class="social-link w-inline-block">
+                                <div class="social-text">facebook</div>
+                                <img src="	https://max-themes.net/demos/darkyn/images/arrow-down-right.png" alt=""
+                                    class="social-arrow">
+                            </a>
+                            <a href="#" target="_blank" class="social-link w-inline-block">
+                                <div class="social-text">instagram</div>
+                                <img src="	https://max-themes.net/demos/darkyn/images/arrow-down-right.png" alt=""
+                                    class="social-arrow">
+                            </a>
+                            <a href="#" class="social-link last-social w-inline-block">
+                                <div class="social-text">youtube</div>
+                                <img src="	https://max-themes.net/demos/darkyn/images/arrow-down-right.png" alt=""
+                                    class="social-arrow">
+                            </a>
                         </div>
-                    </div>
-                    <div class="dm-testimonial-slider swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <span class="dm-testimonial--quote"><img
-                                        src="assets/img/digital-marketing/icon/dm-qu.png" alt=""></span>
-                                <p class="dm-testimonial--content">Auxa has been a game-changer for our online presence.
-                                    Their website design and development team took our vision and turned it into a
-                                    stunning reality. The results speak for themselves – our website has never looked
-                                    better.</p>
-                                <div class="dm-testimonial--avater">
-                                    <h2 class="name">Maralina Harless</h2>
-                                    <h3 class="title">Campaign manager</h3>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <span class="dm-testimonial--quote"><img
-                                        src="assets/img/digital-marketing/icon/dm-qu.png" alt=""></span>
-                                <p class="dm-testimonial--content">Our website has never looked better, thanks to Avix's
-                                    game-changing website design and development team. They turned our vision into
-                                    reality.Our vision has become a stunning reality.</p>
-                                <div class="dm-testimonial--avater">
-                                    <h2 class="name">Donald E. Flores</h2>
-                                    <h3 class="title">education teacher</h3>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <span class="dm-testimonial--quote"><img
-                                        src="assets/img/digital-marketing/icon/dm-qu.png" alt=""></span>
-                                <p class="dm-testimonial--content">Thanks to Avix's game-changing website design and
-                                    development, our online presence has reached new heights. Our website has never
-                                    looked better. Avix transformed our online presence with their outstanding</p>
-                                <div class="dm-testimonial--avater">
-                                    <h2 class="name">M. Martinez</h2>
-                                    <h3 class="title">Fashion Designer</h3>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <span class="dm-testimonial--quote"><img
-                                        src="assets/img/digital-marketing/icon/dm-qu.png" alt=""></span>
-                                <p class="dm-testimonial--content">Auxa has been a game-changer for our online presence.
-                                    Their website design and
-                                    development team took our vision and turned it into a stunning reality. The results
-                                    speak for themselves – our
-                                    website has never looked better.</p>
-                                <div class="dm-testimonial--avater">
-                                    <h2 class="name">Maralina Harless</h2>
-                                    <h3 class="title">Fashion Designer</h3>
-                                </div>
-                            </div>
+                        <div class="add-to-cart-btn mt-20">
+                            <button class="xb-btn">Pre Order</button>
                         </div>
-                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </section>
-            <!-- testimonial end -->
 
-            <!-- Team section start  -->
-            <section class="team-area z-3 pt-130">
-                <div class="container">
-                    <div class="section-title section-title--dm mb-60">
-                        <span class="sub-title mb-45 wow fadeInRight" data-wow-duration=".7s">MEET OUR
-                            PROFESSIONALS</span>
-                        <div class="clearfix"></div>
-                        <h3 class="title wow skewIn">Experience the Future with our <br> <span>Visionary Team</span>
-                        </h3>
-                    </div>
-                </div>
-                <div class="dm-team-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="xb-team dm-team pos-rel">
-                                <div class="xb-item--img ">
-                                    <img src="assets/img/digital-marketing/team/dm-team01.jpg" alt="">
-                                </div>
-                                <div class="xb-item--holder text-center">
-                                    <h3 class="xb-item--title"><a href="team-single.html">Gohendra Maris</a></h3>
-                                    <p class="xb-item--desig">Founder & CO</p>
-                                    <ul class="xb-item--icon ul_li_center">
-                                        <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="xb-team dm-team pos-rel">
-                                <div class="xb-item--img ">
-                                    <img src="assets/img/digital-marketing/team/dm-team02.jpg" alt="">
-                                </div>
-                                <div class="xb-item--holder text-center">
-                                    <h3 class="xb-item--title"><a href="team-single.html">Alexzender Loriss</a></h3>
-                                    <p class="xb-item--desig">UI/UX Designer</p>
-                                    <ul class="xb-item--icon ul_li_center">
-                                        <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="xb-team dm-team pos-rel">
-                                <div class="xb-item--img ">
-                                    <img src="assets/img/digital-marketing/team/dm-team03.jpg" alt="">
-                                </div>
-                                <div class="xb-item--holder text-center">
-                                    <h3 class="xb-item--title"><a href="team-single.html">Edumard Maris</a></h3>
-                                    <p class="xb-item--desig">Fashion Designer</p>
-                                    <ul class="xb-item--icon ul_li_center">
-                                        <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="xb-team dm-team pos-rel">
-                                <div class="xb-item--img ">
-                                    <img src="assets/img/digital-marketing/team/dm-team04.jpg" alt="">
-                                </div>
-                                <div class="xb-item--holder text-center">
-                                    <h3 class="xb-item--title"><a href="team-single.html">Gohendra Maris</a></h3>
-                                    <p class="xb-item--desig">Branding Designer</p>
-                                    <ul class="xb-item--icon ul_li_center">
-                                        <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="xb-team dm-team pos-rel">
-                                <div class="xb-item--img ">
-                                    <img src="assets/img/digital-marketing/team/dm-team02.jpg" alt="">
-                                </div>
-                                <div class="xb-item--holder text-center">
-                                    <h3 class="xb-item--title"><a href="team-single.html">Gohendra Maris</a></h3>
-                                    <p class="xb-item--desig">Branding Designer</p>
-                                    <ul class="xb-item--icon ul_li_center">
-                                        <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Team section end  -->
-
-            <!-- instragram start -->
-            <section class="instragram pt-130 pb-130">
-                <div class="instragram-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="instragram-img pos-rel">
-                                <img src="assets/img/digital-marketing/instragram/ins01.jpg" alt="">
-                                <a href="#!" class="ins_link"><img src="assets/img/digital-marketing/icon/ins01.svg"
-                                        alt=""></a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="instragram-img pos-rel">
-                                <img src="assets/img/digital-marketing/instragram/ins02.jpg" alt="">
-                                <a href="#!" class="ins_link"><img src="assets/img/digital-marketing/icon/ins01.svg"
-                                        alt=""></a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="instragram-img pos-rel">
-                                <img src="assets/img/digital-marketing/instragram/ins03.jpg" alt="">
-                                <a href="#!" class="ins_link"><img src="assets/img/digital-marketing/icon/ins01.svg"
-                                        alt=""></a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="instragram-img pos-rel">
-                                <img src="assets/img/digital-marketing/instragram/ins04.jpg" alt="">
-                                <a href="#!" class="ins_link"><img src="assets/img/digital-marketing/icon/ins01.svg"
-                                        alt=""></a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="instragram-img pos-rel">
-                                <img src="assets/img/digital-marketing/instragram/ins05.jpg" alt="">
-                                <a href="#!" class="ins_link"><img src="assets/img/digital-marketing/icon/ins01.svg"
-                                        alt=""></a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="instragram-img pos-rel">
-                                <img src="assets/img/digital-marketing/instragram/ins06.jpg" alt="">
-                                <a href="#!" class="ins_link"><img src="assets/img/digital-marketing/icon/ins01.svg"
-                                        alt=""></a>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="instragram-img pos-rel">
-                                <img src="assets/img/digital-marketing/instragram/ins03.jpg" alt="">
-                                <a href="#!" class="ins_link"><img src="assets/img/digital-marketing/icon/ins01.svg"
-                                        alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- istragram end -->
 
         </main>
         <!-- main area end  -->
