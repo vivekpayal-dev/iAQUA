@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Ripple.js/1.0.0/ripple.min.css" />
     <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -160,6 +161,7 @@
             </div>
         </div>
         <!-- overlay menu end -->
+
         <!-- main area start  -->
         <main>
 
@@ -264,6 +266,12 @@
                     max-width: 800px;
                     margin-inline: auto;
                 }
+
+                @media (min-width: 1200px) {
+                    .cta-slide__content {
+                        padding: 7vw 2.8vw 6vw 4.1vw;
+                    }
+                }
             </style>
 
             <!-- hero section end -->
@@ -283,88 +291,220 @@
             <!-- dm-brand end -->
             <!-- service start -->
 
-            <section class="service-4 pos-rel mb-130">
-                <div class="container">
-                    <div class="section-title section-title--dm mb-55">
-                        <span class="sub-title mb-45 wow fadeInRight" data-wow-duration=".7s">services</span>
-                        <div class="clearfix"></div>
-                        <h3 class="title wow skewIn">The Revolutionary <br>
-                            <span>AquaDart Phantom 750R</span>
-                        </h3>
-                    </div>
-                </div>
-                <div class="services-inner pos-rel">
-                    <div class="services-bg bg_img"
-                        data-background="assets/img/digital-marketing/dm-service/srv-bg.jpg"></div>
-                    <div class="dm-service-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide dm-service">
-                                <div class="xb-item--holder">
-                                    <h2 class="xb-item--title"><a href="#">.01 <br> AquaDart Phantom 750R Range
-                                        </a>
-                                    </h2>
-                                    <div class="xb-item--content">Discover the new AquaDart Nano range in 4 colours for
-                                        you to choose from…</div>
-                                </div>
-                                <div class="xb-item--image"><img
-                                        src="https://www.iaquawatercraft.com/images/AquaDart_Nano_Studio_Product_Shots/1200x883/AquaDart_Nano_Corsica_Orange-Cover-1200x833.jpg"
-                                        alt=""></div>
-                                <div class="xb-item--srv_link">
-                                    <a href="#">Discover More <span><img
-                                                src="assets/img/digital-marketing/icon/dm-srv.png" alt=""></span></a>
-                                </div>
+            <style>
+                .services-slider-content {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                @media (min-width: 992px) {
+                    .services-slider-content {
+                        padding-left: 12vw;
+                        padding-bottom: 0;
+                    }
+                }
+
+                .cta-slide__slide-number {
+                    position: absolute;
+                    top: 20px;
+                    left: 30px;
+                    font-size: 0.9375rem;
+                    font-weight: normal;
+                    line-height: 1.67;
+                    letter-spacing: 0.07062rem;
+                }
+
+                .cta-slide__description {
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-transform: capitalize;
+                    line-height: 21px;
+                    margin-top: 1rem;
+                }
+
+                @media (min-width: 768px) {
+                    h3.cta-slide__header {
+                        font-size: 1.625rem;
+                        letter-spacing: 0.01625rem;
+                        line-height: 1.31;
+                    }
+                }
+
+                .cta-slide__actions {
+                    display: flex;
+                }
+
+                .cta-slide__content {
+                    max-width: 530px;
+                }
+
+                .cta-slide__header {
+                    font-size: 30px !important;
+                    font-weight: 700;
+                    margin-bottom: 8px;
+                }
+
+                .services-cards {
+                    background-color: black;
+                    padding-block: 3rem;
+                }
+
+                .services-cards .swiper-button-prev,
+                .services-cards .swiper-button-next {
+                    position: absolute;
+                    width: 90px;
+                    height: 90px;
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 999;
+                    pointer-events: auto;
+                    cursor: pointer;
+                    opacity: 0;
+                    transform: translate(-50%, -50%) rotate(45deg) scale(0.9);
+                    transition: opacity 0.3s ease, transform 0.4s ease;
+                    will-change: opacity, transform;
+                }
+
+                .swiper-button-show {
+                    opacity: 1 !important;
+                    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+                }
+
+                .swiper-button-hide {
+                    opacity: 0 !important;
+                    transform: translate(-50%, -50%) rotate(45deg) scale(0.9);
+                    pointer-events: none;
+                }
+
+                .services-cards .swiper-button-prev i,
+                .services-cards .swiper-button-next i {
+                    transform: rotate(-45deg);
+                    font-size: 30px;
+                    transition: transform 0.4s ease;
+                }
+
+                .services-cards {
+                    cursor: none !important;
+                }
+
+                .services-cards .swiper-button-prev:hover,
+                .services-cards .swiper-button-next:hover {
+                    transform: translate(-50%, -50%) rotate(45deg) scale(1.1);
+                    transition: transform 0.3s ease;
+                }
+
+                .services-cards .swiper-button-prev {
+                    left: 0;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+
+                .services-cards .swiper-button-next {
+                    right: 0;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+
+                .services-cards .swiper-button-prev i,
+                .services-cards .swiper-button-next i {
+                    transform: rotate(316deg);
+                }
+
+                .services-cards .swiper-button-prev::after,
+                .services-cards .swiper-button-next::after {
+                    content: none;
+                }
+
+                .services-cards .swiper-button-prev:after,
+                .services-cards .swiper-button-next:after {
+                    content: 'none';
+                }
+            </style>
+
+            <section class="services-cards swiper-container mb-60">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="services-slider-content">
+                            <div class="service-slider-img animate-from-left">
+                                <img src="https://media.istockphoto.com/id/98462741/photo/woman-on-a-jet-ski-in-the-ocean-during-the-sunset.jpg?s=612x612&w=0&k=20&c=g9HmcHRRymmuvrLauI_PQT0R50kW0rPOohRnCOcSHDY="
+                                    alt="" class="w-100">
                             </div>
-                            <div class="swiper-slide dm-service">
-                                <div class="xb-item--holder">
-                                    <h2 class="xb-item--title"><a href="#">.02 <br>AquaDart Phantom 750R</a></h2>
-                                    <div class="xb-item--content">Introducing the all-new AquaDart Phantom 750R with
-                                        DualJet™ Propulsion Technology. No other dive scooter comes close to matching
-                                        its incredible power-to-weight ratio</div>
-                                </div>
-                                <div class="xb-item--image"><img
-                                        src="https://www.iaquawatercraft.com/images/AquaDart_Nano_Studio_Product_Shots/1200x883/AquaDart_Nano_Corsica_Orange-Cover-1200x833.jpg"
-                                        alt=""></div>
-                                <div class="xb-item--srv_link">
-                                    <a href="#">Discover More <span><img
-                                                src="assets/img/digital-marketing/icon/dm-srv.png" alt=""></span></a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide dm-service">
-                                <div class="xb-item--holder">
-                                    <h2 class="xb-item--title"><a href="#">.03 <br>AquaDart Phantom 750R Design & <br>
-                                            Engineering
-                                        </a></h2>
-                                    <div class="xb-item--content">Meticulously designed to be lighter, more efficient
-                                        and way more fun than other sea scooters...
+                            <div class="cta-slide__content-wrapper animate-from-right">
+                                <div class="cta-slide__content position-relative">
+                                    <div class="cta-slide__slide-number">01</div>
+                                    <h3 class="cta-slide__header">Rec Lite - JetBlaster Series</h3>
+                                    <h6 class="cta-slide__subheader">Starting at $7,999</h6>
+                                    <p class="cta-slide__description body-2">The compact-sized, ultra-lightweight
+                                        JetBlaster Series is also Yamaha's most affordable two and three-person
+                                        WaveRunners<sup>®</sup>. It's designed for exhilarating, playful riding, powered
+                                        by Yamaha's 1L TR-1 High Output marine engine.</p>
+                                    <div class="product-option mt-4">
+                                        <form class="form">
+                                            <div class="product-row">
+                                                <div class="add-to-cart-btn">
+                                                    <button class="xb-btn"><i class="far fa-shopping-bag"></i> Add to
+                                                        cart</button>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
-                                <div class="xb-item--image"><img
-                                        src="https://www.iaquagroup.com/templates/yootheme/cache/01/720Xtreme-hero-010bee27.webp"
-                                        alt=""></div>
-                                <div class="xb-item--srv_link">
-                                    <a href="#">Discover More <span><img
-                                                src="assets/img/digital-marketing/icon/dm-srv.png" alt=""></span></a>
-                                </div>
                             </div>
-                            <div class="swiper-slide dm-service">
-                                <div class="xb-item--holder">
-                                    <h2 class="xb-item--title"><a href="#">.04 <br> AquaDart Phantom 750R
-                                            Performance</a>
-                                    </h2>
-                                    <div class="xb-item--content">Winner of the World's Best Luxury Water Toy, iAqua
-                                        bring you the world's most powerful, most competitively priced dive scooter.
-                                    </div>
-                                </div>
-                                <div class="xb-item--image"><img
-                                        src="https://www.iaquagroup.com/templates/yootheme/cache/01/NanoVideoGalleryPage-hero-016f3dce.webp"
-                                        alt=""></div>
-                                <div class="xb-item--srv_link">
-                                    <a href="#">Discover More <span><img
-                                                src="assets/img/digital-marketing/icon/dm-srv.png" alt=""></span></a>
-                                </div>
-                            </div>
+                            <style>
+                                .animate-from-left {
+                                    opacity: 0;
+                                    transform: translateX(-80px);
+                                }
+
+                                .animate-from-right {
+                                    opacity: 0;
+                                    transform: translateX(80px);
+                                }
+                            </style>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    if (window.gsap && window.ScrollTrigger) {
+                                        gsap.registerPlugin(ScrollTrigger);
+
+                                        gsap.to(".service-slider-img.animate-from-left", {
+                                            x: 0,
+                                            opacity: 1,
+                                            duration: 0.6, // faster
+                                            ease: "power2.out",
+                                            scrollTrigger: {
+                                                trigger: ".service-slider-img.animate-from-left",
+                                                start: "top 80%",
+                                                toggleActions: "play none none reverse"
+                                            }
+                                        });
+
+                                        // Slow animation for content (from right)
+                                        gsap.to(".cta-slide__content-wrapper.animate-from-right", {
+                                            x: 0,
+                                            opacity: 1,
+                                            duration: 2, 
+                                            ease: "power4.out",
+                                            scrollTrigger: {
+                                                trigger: ".cta-slide__content-wrapper.animate-from-right",
+                                                start: "top 80%",
+                                                toggleActions: "play none none reverse"
+                                            }
+                                        });
+                                    }
+                                });
+                            </script>
                         </div>
                     </div>
+                    <div class="swiper-slide">
+                        <h1>Helo</h1>
+                    </div>
+                </div>
+                <!-- Swiper Navigation -->
+                <div class="swiper-button-prev">
+                    <i class="ri-arrow-left-line"></i>
+                </div>
+                <div class="swiper-button-next">
+                    <i class="ri-arrow-right-line"></i>
                 </div>
             </section>
 
@@ -830,6 +970,79 @@
 
     <!-- jQuery and Ripples.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+
+    <script>
+        const section = document.querySelector('.services-cards');
+        const btnPrev = section.querySelector('.swiper-button-prev');
+        const btnNext = section.querySelector('.swiper-button-next');
+
+        let lastHovered = ''; // track last side hovered
+
+        section.addEventListener('mousemove', (e) => {
+            const rect = section.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const half = rect.width / 2;
+
+            if (x < half) {
+                if (lastHovered !== 'left') {
+                    btnNext.classList.remove('swiper-button-show');
+                    btnNext.classList.add('swiper-button-hide');
+
+                    btnPrev.classList.remove('swiper-button-hide');
+                    btnPrev.classList.add('swiper-button-show');
+
+                    lastHovered = 'left';
+                }
+                btnPrev.style.top = `${y}px`;
+                btnPrev.style.left = `${Math.min(x, half - 45)}px`;
+            } else {
+                if (lastHovered !== 'right') {
+                    btnPrev.classList.remove('swiper-button-show');
+                    btnPrev.classList.add('swiper-button-hide');
+
+                    btnNext.classList.remove('swiper-button-hide');
+                    btnNext.classList.add('swiper-button-show');
+
+                    lastHovered = 'right';
+                }
+                btnNext.style.top = `${y}px`;
+                btnNext.style.left = `${Math.max(x, half + 45)}px`;
+            }
+        });
+
+        section.addEventListener('mouseleave', () => {
+            btnPrev.classList.remove('swiper-button-show');
+            btnNext.classList.remove('swiper-button-show');
+
+            btnPrev.classList.add('swiper-button-hide');
+            btnNext.classList.add('swiper-button-hide');
+
+            lastHovered = '';
+        });
+    </script>
+
+
+
+    <script>
+        // Swiper configuration for .services-cards: 1 slide per view
+        var servicesSwiper = new Swiper('.services-cards', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            keyboard: {
+                enabled: true,
+            },
+            mousewheel: {
+                forceToAxis: true,
+            },
+        });
+    </script>
+
 
     <script>
 
