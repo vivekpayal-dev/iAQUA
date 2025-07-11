@@ -17845,8 +17845,8 @@ img {
 .services-cards .swiper-button-prev,
 .services-cards .swiper-button-next {
   position: absolute;
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   background-color: white;
   display: flex;
   align-items: center;
