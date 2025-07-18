@@ -49,22 +49,14 @@
                         <div class="main-menu__wrap ul_li navbar navbar-expand-lg">
                             <nav class="main-menu collapse navbar-collapse">
                                 <ul>
-                                    <li><a href="#" class="active"><span>Home</span></a></li>
-                                    <li><a href="#"><span> X-Jet™</span></a></li>
-                                    <li class="menu-item-has-children"><a href="#"><span>AquaDart™</span></a>
-                                        <ul class="submenu">
-                                            <li><a href="#"><span> AquaDart Dealer information</span></a></li>
-                                            <li><a href="#"><span> AquaDart Nano range</span></a></li>
-                                            <li><a href="#"><span>AquaDart Pro range</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#"><span>Investors</span></a></li>
-                                    <li><a href="#"><span>Find Dealers</span></a></li>
+                                    <li><a href="/" class="active"><span>Home</span></a></li>
+                                    <li><a href="about-us.html"><span>About Us</span></a></li>
+                                    <li><a href="#"><span>AquaDart Dive Scooter</span></a></li>
+                                    <li><a href="#"><span>X-Jet Powered Surfboard</span></a></li>
                                     <li><a href="#"><span>Future Products</span></a></li>
-
-                                    <li><a href="#"><span> Become a Dealer</span></a></li>
-                                    <li><a href="./contact-us.html"><span> Contact us</span></a></li>
-                                    <li><a href="/about-us.html"><span> About us</span></a></li>
+                                    <li><a href="#"><span>Find a Dealer</span></a></li>
+                                    <li><a href="#"><span>Become a Dealer</span></a></li>
+                                    <li><a href="contact-us.html"><span>Contact Us</span></a></li>
                                 </ul>
                             </nav>
                             <div class="xb-header-wrap">
@@ -82,21 +74,14 @@
                                         </div>
                                         <nav class="xb-header-nav">
                                             <ul class="xb-menu-primary clearfix">
-                                                <li><a href="#" class="active"><span>Home</span></a></li>
-                                                <li><a href="#"><span> X-Jet™</span></a></li>
-                                                <li class="menu-item-has-children"><a
-                                                        href="#"><span>AquaDart™</span></a>
-                                                    <ul class="submenu">
-                                                        <li><a href="#"><span> AquaDart Dealer information</span></a>
-                                                        </li>
-                                                        <li><a href="#"><span> AquaDart Nano range</span></a></li>
-                                                        <li><a href="#"><span>AquaDart Pro range</span></a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#"><span> Lithium Safety Store™</span></a></li>
-                                                <li><a href="#"><span> Become a Dealer</span></a></li>
-                                                <li><a href="/contact-us.html"><span> Contact us</span></a></li>
-                                                <li><a href="/about-us.html"><span> About us</span></a></li>
+                                                <li><a href="/" class="active"><span>Home</span></a></li>
+                                                <li><a href="about-us.html"><span>About Us</span></a></li>
+                                                <li><a href="#"><span>AquaDart Dive Scooter</span></a></li>
+                                                <li><a href="#"><span>X-Jet Powered Surfboard</span></a></li>
+                                                <li><a href="#"><span>Future Products</span></a></li>
+                                                <li><a href="#"><span>Find a Dealer</span></a></li>
+                                                <li><a href="#"><span>Become a Dealer</span></a></li>
+                                                <li><a href="contact-us.html"><span>Contact Us</span></a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -104,13 +89,13 @@
                                 <div class="xb-header-menu-backdrop"></div>
                             </div>
                         </div>
-                        <div class="ul_li">
+                        <!-- <div class="ul_li">
                             <div class="side-menu-4 d-none d-lg-block">
                                 <a href="javascript:void(0);" class="burger-menu">
                                     <img src="assets/img/digital-marketing/icon/menu01.png" alt="">
                                 </a>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="header-bar-mobile side-menu d-lg-none">
                             <a class="xb-nav-mobile" href="javascript:void(0);"><img
                                     src="assets/img/digital-marketing/icon/menu01.png" alt=""></a>
@@ -200,12 +185,54 @@
                 </div>
             </section>
 
+            <style>
+                .brand-vdo {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .brand-vdo video {
+                    object-fit: cover;
+                }
+
+                .brand .section-title {
+                    z-index: 99;
+                    position: relative;
+                }
+
+                .overlay {
+                    position: relative;
+                }
+
+                .overlay::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(180deg, rgba(19, 18, 23, 0.6) 0%, rgba(19, 18, 23, 0.3) 100%);
+                    pointer-events: none;
+                    z-index: 1;
+                }
+            </style>
+
             <!-- hero section end -->
-            <section class="brand pt-90 pb-60">
+            <section class="brand overlay position-relative pt-90 pb-60">
+                <div class="brand-vdo">
+                    <video autoplay loop muted playsinline class="w-100 h-100">
+                        <source src="./assets/video-banner.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
                 <div class="container">
                     <div class="section-title section-title--dm mb-55 d-flex justify-content-center flex-column gap-3">
                         <h3 class="title wow skewIn text-center">Born to Perform</h3>
-                        <p class="text-center text-captilize">Meet the all-new AquaDart Phantom 720. Pure carbon fiber
+                        <p class="text-center text-captilize text-white">Meet the all-new AquaDart Phantom 720. Pure
+                            carbon fiber
                             body. Single,
                             ultra-capacity
                             battery. Sharper thrust. Bold colours. Just under 30 kg.
@@ -594,10 +621,11 @@
                                     alt="" class="h-100 w-100">
                                 <div class="market-img-content">
                                     <h4>Join the Movement</h4>
-                                    <p>Become an official iAQUA dealer and represent the most powerful dive
+                                    <p class="text-center">Become an official iAQUA dealer and represent the most
+                                        powerful dive
                                         scooter on the planet. High-margin, high-tech, high-demand.</p>
                                     <div class="add-to-cart-btn mt-2">
-                                        <a href="#" class="xb-btn">Dealer Locator</a>
+                                        <a href="#" class="xb-btn">Become a Dealer</a>
                                     </div>
                                 </div>
                             </div>
