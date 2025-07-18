@@ -17614,7 +17614,7 @@ img {
 }
 
 .spotlight-para {
-  background: radial-gradient(circle at center, white, gray, black);
+  background: radial-gradient(circle at center, white, #ededed, #7b7b7b);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -17766,7 +17766,7 @@ img {
 .future-section-para {
   font-weight: 400;
   font-size: 20px;
-  color: #cacaca;
+  color: #ededed;
 }
 
 .text-captilize {
@@ -17977,7 +17977,7 @@ img {
 }
 
 .future-bg {
-  height: 400px;
+  height: 500px;
   overflow: hidden;
 }
 
